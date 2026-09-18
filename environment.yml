@@ -1,16 +1,22 @@
 name: sustain-lc
+
 channels:
+  - pytorch
+  - nvidia
   - conda-forge
-  - pytorch
+  - nodefaults
+
 dependencies:
-  - python=3.10
+  - python=3.11      # or 3.10
   - pytorch
-  - pytorch-cuda=11.8
+  - pytorch-cuda=12.4
+  - libblas=*=*mkl
+  - liblapack=*=*mkl
   - matplotlib
   - tensorboard
-  - conda-forge::gymnasium
-  - conda-forge::pyfmi
+  - gymnasium
+  - pyfmi
   - tqdm
-  - conda-forge::casadi
-  - anaconda::scikit-learn
-  - dnachun::torchviz
+  - casadi
+  - scikit-learn
+  # - torchviz
